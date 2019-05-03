@@ -1,0 +1,46 @@
+{
+  "name": "liam-potter.dev",
+  "version": "1.0.0",
+  "description": "Self-taught web developer specialising in full-stack JavaScript development",
+  "author": "Liam Potter <me@liam-potter.co.uk>",
+  "private": true,
+  "scripts": {
+    "dev": "cross-env HOST=0.0.0.0 PORT=4321 NODE_ENV=development nuxt",
+    "dev:production": "cross-env HOST=0.0.0.0 PORT=4321 NODE_ENV=production nuxt",
+    "build": "cross-env DEBUG=nuxt:* NODE_ENV=production nuxt build --modern=server",
+    "start": "cross-env HOST=0.0.0.0 PORT=4321 NODE_ENV=production nuxt start",
+    "generate": "nuxt generate",
+    "lint": "eslint --ext .js,.vue --ignore-path .gitignore .",
+    "precommit": "npm run lint",
+    "test": "jest"
+  },
+  "dependencies": {
+    "@nuxtjs/pwa": "^3.0.0-beta.14",
+    "nuxt": "npm:nuxt-edge"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.4.4",
+    "@nuxtjs/eslint-config": "^0.0.1",
+    "@vue/test-utils": "^1.0.0-beta.29",
+    "babel-eslint": "^10.0.1",
+    "babel-jest": "^24.7.1",
+    "cross-env": "^5.2.0",
+    "eslint": "^5.16.0",
+    "eslint-config-standard": "^12.0.0",
+    "eslint-loader": "^2.1.2",
+    "eslint-plugin-import": "^2.17.2",
+    "eslint-plugin-jest": "^22.5.1",
+    "eslint-plugin-node": "^8.0.1",
+    "eslint-plugin-nuxt": "^0.4.3",
+    "eslint-plugin-promise": "^4.1.1",
+    "eslint-plugin-standard": "^4.0.0",
+    "eslint-plugin-vue": "^5.2.2",
+    "jest": "^24.7.1",
+    "nodemon": "^1.19.0",
+    "pug": "^2.0.3",
+    "pug-plain-loader": "^1.0.0",
+    "stylus": "^0.54.5",
+    "stylus-loader": "^3.0.2",
+    "vue-jest": "^3.0.3"
+  }
+}
