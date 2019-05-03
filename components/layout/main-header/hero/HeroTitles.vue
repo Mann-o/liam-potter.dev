@@ -1,7 +1,7 @@
 <template lang="pug">
   .hero__titles
     h1 Liam Potter
-    h2 Dad, Husband, Web Developer, Gamer. In that order.
+    p.hero__titles__tagline Dad, Husband, Web Developer, Gamer. In that order.
 </template>
 
 <script>
@@ -15,8 +15,15 @@ export default {
 
 .hero
   +has(titles)
-    color: red
+    padding-top: 4rem
+    padding-bottom: 2rem
+    color: #fff
 
     h1::after
       content: '_'
+
+    +has(tagline)
+      font-size: 2rem
+      letter-spacing: 1px
+      word-spacing: 3px
 </style>

@@ -1,33 +1,24 @@
 <template lang="pug">
   header.main-header
-    nav: ul
-      li(v-for="({ to, label }, index) in links" :key="index")
-        nuxt-link(:to="to") {{ label }}
-
-    Hero
+    WidthContainer
+      MainNavigation
+      Hero
 </template>
 
 <script>
-import { mapState } from 'vuex'
-
 export default {
   name: 'MainHeader',
 
   components: {
     Hero: () => import('./hero/Hero'),
-  },
-
-  data: () => ({
-    links: [
-      { to: '/', label: 'Hello' },
-      { to: '/cv', label: 'CV' },
-    ],
-  }),
-
-  computed: {
-    ...mapState('scroll', [
-      'pageIsScrolled',
-    ]),
+    MainNavigation: () => import('./main-navigation/MainNavigation'),
+    WidthContainer: () => import('@/components/layout/WidthContainer'),
   },
 }
 </script>
+
+<style lang="stylus" scoped>
+.main-header
+  background-color: #4a4a4a
+  padding: 4rem 0
+</style>
